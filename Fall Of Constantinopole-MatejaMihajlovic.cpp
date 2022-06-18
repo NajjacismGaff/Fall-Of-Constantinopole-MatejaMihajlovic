@@ -215,26 +215,26 @@ int main()
 
                 if (event.type == ALLEGRO_EVENT_KEY_UP)
                 {
-                    if(prk / 3==0&&c1>=1)
+                    if(prk % 11==0&&c1>=1)
                     {
                         printf("fddfsdfsdfsdfsdfsdfsdfsdfdfs");
                         al_play_sample(Bblizu, 1.0, 0, 1,ALLEGRO_PLAYMODE_ONCE, NULL);
                         c1 = c1 - 2;
                         
                     }
-                    if (prk / 4==0&&c2>=1)
+                    if (prk % 21==0&&c2>=1)
                     {
                         printf("fddfsdfsdfsdfsdfsdfsdfsdfdfs");
                         al_play_sample(Bdaleko, 1.0, 0, 1, ALLEGRO_PLAYMODE_ONCE, NULL);
                         c2 = c2 - 2;
                     }
-                    if (prk / 6 == 0&&c3>=1)
+                    if (prk % 27 == 0&&c3>=1)
                     {
                         printf("fddfsdfsdfsdfsdfsdfsdfsdfdfs");
                         al_play_sample(Bblizu, 1.0, 0, 1, ALLEGRO_PLAYMODE_ONCE, NULL);
                         c3 = c3 - 2;
                     }
-                    if (prk / 7 == 0&&c4>=1)
+                    if (prk % 19 == 0&&c4>=1)
                     {
                         printf("fddfsdfsdfsdfsdfsdfsdfsdfdfs");
                         al_play_sample(Bdaleko, 1.0, 0, 1, ALLEGRO_PLAYMODE_ONCE, NULL);
