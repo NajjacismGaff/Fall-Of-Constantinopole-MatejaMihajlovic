@@ -62,6 +62,10 @@ int main()
 
     int prc = 0;//prc tho
 
+    //deadline
+
+    int deadline = 0;
+
     al_init();
     display = al_create_display(1000, 700);
     queue = al_create_event_queue();
@@ -202,7 +206,39 @@ int main()
                }
                 if ((x1+x2+x3+x4) == 4) {
                     al_draw_bitmap(turki,0,0,0);
+
+                    for (int i = 0; i <= 9999999999999999;i++)printf("turki win!!!");
+                   
                 }
+
+                if (deadline > 2200)
+                {
+                    x1 = 0;
+                    x2 = 0;
+                    x3 = 0;
+                    x4 = 0;
+
+                    c1 = 17;
+                    c2 = 32;
+                    c3 = 24;
+                    c4 = 20;
+
+                    ox1 = 0;
+                    ox2 = 0;
+                    ox3 = 0;
+                    ox4 = 0;
+                    ox5 = 0;
+
+                    o1 = 23; 
+                    o2 = 32;
+                    o3 = 30;
+                    o4 = 20;
+                    o5 = 17;
+                    deadline = 0;
+
+                }
+
+
 
                 if (o1 <= 0)ox1 = 1;
                 if (o2 <= 0)ox2 = 1;
@@ -224,7 +260,7 @@ int main()
                     prk = attackBroj;
                 }
                 
-                printf("\t%d\t%d %d %d %d\t%d\n%d", prk,c1,c2,c3,c4,sek);
+                printf("\t%d\t%d-%d-%d-%d\t+%d\tdeadline = %d", prk,c1,c2,c3,c4,sek,deadline);
                 printf("\n");
 
                 if (o1>=1)al_draw_bitmap(ottoman1, 6, 300, 0);
@@ -322,6 +358,7 @@ int main()
         
 
         if (x > width) x = al_get_bitmap_width(carigrad);
+        //deadline++;
 
     }
 
